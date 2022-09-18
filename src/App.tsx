@@ -1,7 +1,11 @@
+import { Header } from "./components/header/Index";
+import { Data } from "./Data";
+
 export const App = () => {
   return (
     <>
-    <h1>whats'up people</h1>;
+    <Header {...Data.header} />
+    <h1>sss</h1>
     </>
-  )
+  );
 };
