@@ -7,7 +7,7 @@ export const Section = ({ img, alt }: propsSection) => {
       <S.Container about="container">
         <S.Background src={img} alt={alt}/>
         <S.Wrapper>
-          <S.SearchWrapper>{/* component search */}</S.SearchWrapper>
+          <S.Search></S.Search>
           <S.DataWrapper>
             <S.DataTemp>
               <S.Temp />
