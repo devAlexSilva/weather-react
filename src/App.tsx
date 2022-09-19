@@ -1,11 +1,12 @@
 import { Header } from "./components/header/Index";
 import { Data } from "./Data";
+import { Section } from "./components/section/Index"
 
 export const App = () => {
   return (
     <>
     <Header {...Data.header} />
-    <h1>sss</h1>
+    <Section {...Data.section}/>
     </>
   );
 };

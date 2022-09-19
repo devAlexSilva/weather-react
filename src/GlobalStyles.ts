@@ -8,7 +8,6 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
-
 `
 
 /*
