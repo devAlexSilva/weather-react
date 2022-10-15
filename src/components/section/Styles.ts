@@ -43,12 +43,40 @@ export const Search = styled.input`
   font-size: 18px;
 `;
 export const DataWrapper = styled.div`
-  background-color: yellow;
+  text-align: center;
   height: 100%;
   width: 85%;
   border-radius: 25px;
+
+  > p:nth-child(1) {
+    font-size: 20px;
+    letter-spacing: 1.6px;
+    font-weight: 600;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  > p:nth-child(2) {
+    text-transform: capitalize;
+    font-family: Georgia;
+  }
+  `;
+export const DataTemp = styled.div`
+  font-size: 32px;
+  font-weight: 900;
+  margin: 50px auto;
+  height: 35%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  > p:nth-child(2) {
+    font-size: 20px;
+  }
+
+
 `;
-export const DataTemp = styled.div``;
 
 export const Temp = styled.p`
   font-size: 20px;

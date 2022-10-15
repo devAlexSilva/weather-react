@@ -6,15 +6,15 @@ import { useState } from "react";
 export const Section = ({ img, alt }: propsSection) => {
   const api = new Api()
   const [textSearch, setTextSearch] = useState('')
-  const [wheater, setWeather] = useState({})
+  const [weather, setWeather] = useState({})
 
   const result = async(e: KeyboardEvent) => {
     if(e.key !== "Enter") return;
     
-    const wheater = await api.get(textSearch)
+    const weather = await api.get(textSearch)
     setTextSearch('')
-    setWeather(wheater)
-    console.log(wheater)    
+    setWeather(weather)
+    console.log(weather)    
   }
 
   const dateNow = (date: Date) => {
@@ -34,12 +34,13 @@ export const Section = ({ img, alt }: propsSection) => {
           onChange={e => setTextSearch(e.target.value)}
           value={textSearch}
           ></S.Search>
-            {wheater.name &&
+            {weather.name &&
           <S.DataWrapper>
-            <h3>{wheater.name}, {wheater.sys.country}</h3>
+            <p>{weather.name}, {weather.sys.country}</p>
               <p>{dateNow(new Date())}</p>
             <S.DataTemp>
-              <p>{wheater.main.temp}°C</p>
+              <p>{weather.main.temp}°C</p>
+              <p>{weather.weather[0].main}</p>
               <S.Temp />
               <S.SvgWrapper>
                 <S.Svg />
