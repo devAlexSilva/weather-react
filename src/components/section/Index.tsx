@@ -14,7 +14,6 @@ export const Section = ({ img, alt }: propsSection) => {
     const weather = await api.get(textSearch);
     setTextSearch("");
     setWeather(weather);
-    console.log(weather);
   };
 
   const dateNow = (date: Date) => {
@@ -51,7 +50,7 @@ export const Section = ({ img, alt }: propsSection) => {
                   </S.SvgWrapper>
                 </S.Temp>
                 <S.Description>
-                <p>{weather.weather[0].description}</p>
+                {weather.weather[0].description}
                 </S.Description>
               </S.DataTemp>
             </S.DataWrapper>
