@@ -1,12 +1,21 @@
 import * as S from "./Styles";
 import { propsSection } from "../../types";
 import { Api, res } from "../../api/openWeather";
-import { useState } from "react";
+import { KeyboardEvent, useState } from "react";
+
+type dataWeather = {
+  name: string,
+  main: {temp: number},
+  sys: {country: string},
+  weather: [{main: string}],
+  cod: string,
+  message: string
+}
 
 export const Section = ({ img, alt }: propsSection) => {
   const api = new Api()
   const [textSearch, setTextSearch] = useState('')
-  const [weather, setWeather] = useState({})
+  const [weather, setWeather] = useState({} as dataWeather)
 
   const result = async(e: KeyboardEvent) => {
     if(e.key !== "Enter") return;
@@ -30,9 +39,10 @@ export const Section = ({ img, alt }: propsSection) => {
         <S.Background src={img} alt={alt}/>
         <S.Wrapper>
           <S.Search 
-          onKeyUp={e => result(e)} 
+          onKeyUp={e => result(e as KeyboardEvent)} 
           onChange={e => setTextSearch(e.target.value)}
           value={textSearch}
+          placeholder="exemplo: Natal"
           ></S.Search>
             {weather.name &&
           <S.DataWrapper>
@@ -47,6 +57,12 @@ export const Section = ({ img, alt }: propsSection) => {
               </S.SvgWrapper>
             </S.DataTemp>
           </S.DataWrapper>
+            }
+            {weather.cod === '404' &&
+            <S.DataWrapper>
+              <S.DataTemp>{weather.message}</S.DataTemp>
+            </S.DataWrapper>
+              
             }
         </S.Wrapper>
       </S.Container>
