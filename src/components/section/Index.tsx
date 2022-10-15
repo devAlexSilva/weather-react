@@ -45,7 +45,7 @@ export const Section = ({ img, alt }: propsSection) => {
                   <span>{weather.main.temp.toFixed(0)}°C</span>
                   <S.SvgWrapper about="wrapperImage">
                     <S.Svg
-                      src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`}
+                      src={`https://openweathermap.org/img/w/${weather.weather[0].icon}.png`}
                     />
                   </S.SvgWrapper>
                 </S.Temp>
