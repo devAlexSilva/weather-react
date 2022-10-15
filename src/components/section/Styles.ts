@@ -5,7 +5,8 @@ export const Container = styled.main`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: calc(100vh - 3rem);
+  height: 100vh;
+  overflow: hidden;
   position: relative;
 `;
 export const Background = styled.img`
@@ -27,6 +28,12 @@ export const Wrapper = styled.section`
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.01);
+
+  @media only screen and (max-height: 450px){
+    height: 100%;
+    justify-content: flex-end;
+    z-index: 3;
+  } 
 `;
 export const Search = styled.input`
   background-color: rgba(255, 255, 255, .3);

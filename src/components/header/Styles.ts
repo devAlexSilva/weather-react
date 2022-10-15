@@ -11,6 +11,10 @@ export const Wrapper = styled.header`
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.15);
+
+  @media only screen and (max-height: 450px){
+    display: none;
+  }
 `;
 export const Logo = styled(FiSun)`
   height: 80%;
