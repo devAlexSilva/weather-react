@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@ export const Background = styled.img`
   height: calc(100vh + 3rem);
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,7 +42,7 @@ export const Search = styled.input`
   border-radius: 25px;
   font-size: 18px;
 `;
-export const DataWrapper = styled.div`
+export const DataWrapper = styled.article`
   text-align: center;
   height: 100%;
   width: 85%;
@@ -78,10 +78,14 @@ export const DataTemp = styled.div`
 
 `;
 
-export const Temp = styled.p`
+export const Temp = styled.div`
+  margin-bottom: 10px;
+`;
+
+export const Description = styled.p`
   font-size: 20px;
 `;
 export const SvgWrapper = styled.sup`
   text-transform: uppercase;
 `;
-export const Svg = styled.div``;
+export const Svg = styled.img``;

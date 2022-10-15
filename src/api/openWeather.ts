@@ -10,7 +10,7 @@ export class Api {
     
     async get(query: string) {
         console.log(query)
-        const baseUrl = `http://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${this.key}`
+        const baseUrl = `http://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&lang=pt_br&appid=${this.key}`
         return await (await fetch(baseUrl)).json()
     }
 }
