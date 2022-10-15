@@ -6,7 +6,7 @@ export const Header = ({textLogo}: propsHeader) => {
         <>
             <S.Wrapper>
                 <S.Logo />
-                <S.Label>{textLogo}</S.Label>
+                <S.Label onClick={() => window.location.reload()}>{textLogo}</S.Label>
             </S.Wrapper>
         </>
     )

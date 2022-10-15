@@ -32,4 +32,5 @@ export const Label = styled.div`
   font-variant: small-caps;
   font-size: 1.5rem;
   border-bottom: 1px solid #000;
+  cursor: pointer;
 `;
