@@ -1,4 +1,3 @@
-
 export type res = [
   coords: {
     latitude: number;
@@ -7,7 +6,7 @@ export type res = [
 ]
 
 export class Api {
-    private key = "d9d9f34d0cc354287d897071b81d9873"
+    private key = import.meta.env.VITE_API_KEY
     
     async get(query: string) {
         console.log(query)

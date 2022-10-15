@@ -6,6 +6,7 @@ import { useState } from "react";
 export const Section = ({ img, alt }: propsSection) => {
   const api = new Api()
   const [textSearch, setTextSearch] = useState('')
+  const [wheater, setWeather] = useState({})
 
   const result = async(e: KeyboardEvent) => {
     e.key === "Enter" && (
@@ -13,6 +14,14 @@ export const Section = ({ img, alt }: propsSection) => {
     setTextSearch('')
     )
   }
+
+  const dateNow = (date: Date) => {
+    let currentDate = date.toLocaleDateString()
+    currentDate = currentDate.replace(/\//, " do ")
+    currentDate = currentDate.replace(/\//, " de ")
+    return currentDate
+  }
+
   return (
     <>
       <S.Container about="container">
@@ -24,6 +33,7 @@ export const Section = ({ img, alt }: propsSection) => {
           value={textSearch}
           ></S.Search>
           <S.DataWrapper>
+              <h3>{dateNow(new Date())}</h3>
             <S.DataTemp>
               <S.Temp />
               <S.SvgWrapper>
