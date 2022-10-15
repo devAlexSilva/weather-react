@@ -1,21 +1,12 @@
 import * as S from "./Styles";
-import { propsSection } from "../../types";
-import { Api, res } from "../../api/openWeather";
+import { propsSection, responseApi } from "../../types";
+import { Api } from "../../api/openWeather";
 import { KeyboardEvent, useState } from "react";
-
-type dataWeather = {
-  name: string;
-  main: { temp: number };
-  sys: { country: string };
-  weather: [{ description: string; icon: string }];
-  cod: string;
-  message: string;
-};
 
 export const Section = ({ img, alt }: propsSection) => {
   const api = new Api();
   const [textSearch, setTextSearch] = useState("");
-  const [weather, setWeather] = useState({} as dataWeather);
+  const [weather, setWeather] = useState({} as responseApi);
 
   const result = async (e: KeyboardEvent) => {
     if (e.key !== "Enter") return;

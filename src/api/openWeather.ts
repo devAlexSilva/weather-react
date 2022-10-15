@@ -1,10 +1,3 @@
-export type res = [
-  coords: {
-    latitude: number;
-    longitude: number;
-  }
-]
-
 export class Api {
     private key = import.meta.env.VITE_API_KEY
     

@@ -8,14 +8,12 @@ export const Container = styled.main`
   height: calc(100vh - 3rem);
   position: relative;
 `;
-
 export const Background = styled.img`
   position: absolute;
   object-fit: cover;
   width: 100%;
   height: calc(100vh + 3rem);
 `;
-
 export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
@@ -30,7 +28,6 @@ export const Wrapper = styled.section`
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.01);
 `;
-
 export const Search = styled.input`
   background-color: rgba(255, 255, 255, .3);
   height: 18%;
@@ -74,14 +71,10 @@ export const DataTemp = styled.div`
   > p:nth-child(2) {
     font-size: 20px;
   }
-
-
 `;
-
 export const Temp = styled.div`
   margin-bottom: 10px;
 `;
-
 export const Description = styled.p`
   font-size: 20px;
 `;
