@@ -11,7 +11,7 @@ export const Section = ({ img, alt }: propsSection) => {
   const result = async (e: KeyboardEvent) => {
     if (e.key !== "Enter") return;
 
-    const weather = await api.get(textSearch);
+    const weather = await api.get(textSearch.trim());
     setTextSearch("");
     setWeather(weather);
   };
@@ -49,9 +49,7 @@ export const Section = ({ img, alt }: propsSection) => {
                     />
                   </S.SvgWrapper>
                 </S.Temp>
-                <S.Description>
-                {weather.weather[0].description}
-                </S.Description>
+                <S.Description>{weather.weather[0].description}</S.Description>
               </S.DataTemp>
             </S.DataWrapper>
           )}

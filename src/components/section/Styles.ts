@@ -44,7 +44,7 @@ export const Search = styled.input`
   outline: none;
   border: none;
   border-radius: 25px;
-  font-size: 18px;
+  font-size: 1.125rem;
 `;
 export const DataWrapper = styled.article`
   text-align: center;
@@ -53,7 +53,7 @@ export const DataWrapper = styled.article`
   border-radius: 25px;
 
   > p:nth-child(1) {
-    font-size: 20px;
+    font-size: 1.25rem;
     letter-spacing: 1.6px;
     font-weight: 600;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -65,7 +65,7 @@ export const DataWrapper = styled.article`
   }
   `;
 export const DataTemp = styled.div`
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 900;
   margin: 50px auto;
   height: 35%;
@@ -74,16 +74,12 @@ export const DataTemp = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  > p:nth-child(2) {
-    font-size: 20px;
-  }
 `;
 export const Temp = styled.div`
   margin-bottom: 10px;
 `;
 export const Description = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
 `;
 export const SvgWrapper = styled.sup`
   text-transform: uppercase;
